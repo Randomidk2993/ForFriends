@@ -1,4 +1,4 @@
-﻿using MenuLib.MonoBehaviors;
+using MenuLib.MonoBehaviors;
 using MenuLib;
 using System;
 using UnityEngine;
@@ -69,14 +69,8 @@ namespace RepoAdminMenu {
             if (menus.Count < 1)
                 Init();
 
-
             if (SemiFunc.MenuLevel()) {
                 RepoAdminMenu.mls.LogInfo("Repo Admin Menu can only be opened while in-game!");
-                return;
-            }
-
-            if (!SemiFunc.IsMasterClientOrSingleplayer()) {
-                RepoAdminMenu.mls.LogInfo("Repo Admin Menu can only be opened in single player or as host in multiplayer!");
                 return;
             }
 
